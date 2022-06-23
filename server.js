@@ -10,7 +10,7 @@ mongoose.connect(db, { useNewUrlParser: true })
 const user = require('./model/user');
 const fav = require('./model/fav');
 const port = process.env.PORT || 8000;
-app.use('/', express.static(__dirname + '/client/public'));
+server.use('/', express.static(__dirname + '/client/public'));
 server.post('/register', (req, res) => {
     const { username, email, password } = req.body;
     user.findOne({ email: email })

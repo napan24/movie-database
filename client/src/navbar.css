@@ -1,0 +1,40 @@
+@media (max-width:2500px) and (min-width:1000px){
+    #navbar_button{
+        left:10vw;
+    }
+    #navbar_profile{
+        left:85vw;
+    }
+}
+@media (max-width:999px) and (min-width:700px){
+    #navbar_button{
+        left:15vw;
+    }
+    #navbar_profile{
+        left:80vw;
+    }
+}
+@media (max-width:699px) and (min-width:500px){
+    #navbar_button{
+        left:20vw;
+    }
+    #navbar_profile{
+        left:75vw;
+    }
+}
+@media (max-width:500px) and (min-width:375px){
+    #navbar_button{
+        left:25vw;
+    }
+    #navbar_profile{
+        left:70vw;
+    }
+}
+@media (max-width:375px) and (min-width:200px){
+    #navbar_button{
+        left:30vw;
+    }
+    #navbar_profile{
+        left:65vw;
+    }
+}

@@ -1,0 +1,38 @@
+.parent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: black;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div.polaroid {
+    width: 90%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.container {
+    text-align: center;
+}
+
+.child {
+    margin-top: 30px;
+    flex-basis: 25%;
+    padding: 5px;
+    color: black;
+    font-size: 16px;
+    box-sizing: border-box;
+}

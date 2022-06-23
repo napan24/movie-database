@@ -1,0 +1,66 @@
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
+import React,{useState} from 'react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import background from "./background1.jpg";
+import './login.css';
+import google_logo from './google_logo.svg';
+import facebook_logo from './facebook_logo.svg';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+export const Login = () => {
+    const [data,setData]=useState({email:"",password:""});
+    const navigate = useNavigate();
+    const doStuff = event => navigate('/Home', { replace: true });
+    const inputChange=(e)=>{
+        let name=e.target.name;
+        let value=e.target.value;
+        setData({...data,[name]:value});
+    };
+    const handleSubmit=async (e) =>{
+        e.preventDefault();
+        const {email,password}=data;
+        const res= await fetch("/signin",{
+            method:'POST',
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({email,password})
+        });
+        const result=await res.json();
+        if(result.data){
+            console.log(result);
+            localStorage.setItem('profile_data', JSON.stringify(result.data));
+            doStuff();
+        }
+    }
+    return (
+        <>
+            <div className="body" style={{ width: "100vw", height: "100vh", backgroundImage: `url(${background})`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
+                <form method='POST'>
+                    <div className="box" style={{ width: "30vw", height: "80vh", backgroundColor: "white", borderRadius: "10px", position: "absolute", left: "0", right: "0", top: "0", bottom: "0", margin: "auto", fontFamily: "Arial, sans-serif" }}>
+                        <h3 style={{ fontSize: "3vw", position: "absolute", left: "30%", top: "0%" }}>
+                            Sign In
+                        </h3>
+                        <div style={{ position: "absolute", top: "25%", left: "8%" }}>
+                            Email
+                        </div>
+                        <input type="text" className="fontAwesome" value={data.email} placeholder="Type Your Email" name="email" style={{ position: "absolute", top: "32%", left: "8%",width:"80%",height:"5%",border:"none",borderBottom:"2px solid black",outline:"none" }} onChange={inputChange}/>
+                        <div style={{ position: "absolute", top: "45%", left: "8%" }}>
+                            Password
+                        </div>
+                        <input type="password" placeholder="Type Your Password" value={data.password} name="password" style={{ position: "absolute", top: "52%", left: "8%",width:"80%",height:"5%",border:"none",borderBottom:"2px solid black",outline:"none" }} onChange={inputChange}/>
+                        <button onClick={handleSubmit} style={{ position: "absolute", top: "65%", left: "8%" ,width:"80%",height:"7%",border:"none",backgroundColor:"black",color:"white",borderRadius:"10px"}}>Sign In</button>
+                        <div style={{position: "absolute", top: "75%", left: "30%",fontSize:"1.5vw"}}>
+                            <bold>Or Sign Up Using</bold>
+                        </div>
+                        <img src={google_logo} style={{position: "absolute", top: "82%", left: "15%",width:"10%"}}></img>
+                        <img src={facebook_logo} style={{position: "absolute", top: "81%", left: "70%",width:"13%"}}></img>
+                        <Link to="signup">
+                            <button style={{ position: "absolute", top: "93%", left: "8%" ,width:"85%",height:"6%",border:"none",backgroundColor:"black",color:"white",borderRadius:"10px"}}>Sign Up</button>
+                        </Link>
+                    </div>
+                </form>
+            </div>
+    </>
+  )
+};

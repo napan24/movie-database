@@ -1,18 +1,19 @@
+const path = require('path')
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const express = require('express');
-const app = express();
-app.use(express.json());
+const server = express();
+server.use(express.json());
 dotenv.config({path:'./config.env'});
 const db = process.env.DB;
 mongoose.connect(db, { useNewUrlParser: true })
 const user = require('./model/user');
 const fav = require('./model/fav');
 const port = process.env.PORT || 8000;
-app.get('/', (req, res) => {
+server.get('/', (req, res) => {
     res.send("hello world");
 });
-app.post('/register', (req, res) => {
+server.post('/register', (req, res) => {
     const { username, email, password } = req.body;
     user.findOne({ email: email })
         .then((exist) => {
@@ -30,7 +31,7 @@ app.post('/register', (req, res) => {
             }
         })
 });
-app.post('/signin', (req, res) => {
+server.post('/signin', (req, res) => {
     const { email, password } = req.body;
     user.findOne({ email: email, password: password },{username:1,email:1,profile_photo:1})
         .then((exist) => {
@@ -42,7 +43,7 @@ app.post('/signin', (req, res) => {
             }
         })
 });
-app.post('/addfav', (req, res) => {
+server.post('/addfav', (req, res) => {
     const { email, user_data,movieid } = req.body;
     fav.findOne({ email: email, movieid: movieid })
         .then((exist) => {
@@ -60,7 +61,7 @@ app.post('/addfav', (req, res) => {
             }
         })
 });
-app.post('/getfav', (req, res) => {
+server.post('/getfav', (req, res) => {
     const { email } = req.body;
     fav.find({ email: email }, { data: 1, _id: 0 })
         .then((exist) => {
@@ -73,10 +74,10 @@ app.post('/getfav', (req, res) => {
         })
 });
 console.log("welcome");
-app.use(express.static(path.join(__dirname, "client", "build")))
-app.get("*", (req, res) => {
+server.use(express.static(path.join(__dirname, "client", "build")))
+server.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
-app.listen(process.env.PORT || 8000, () => {
+server.listen(process.env.PORT || 8000, () => {
     console.log("server at port 8000");
 });

@@ -107,14 +107,14 @@ function Featured_today() {
     return (
         loading ? <Loader /> :
             <>
-                <div className="background" style={{ width: "100vw", backgroundColor: light ? "black" : "#f5c518" }}>
+                <div className="background" style={{ width: "100vw", backgroundColor: light ? "black" : "#f5c518",display:"inline-block",paddingBottom:"8vh" }}>
                     <div className="title" style={{ fontSize: "3vw", color: light ? "#f5c518" : "black", marginBottom: "3vh" }}>
                         Featured Today
                     </div>
                     <div style={{ position: "relative" }}>
                         <div style={{ width: "100vw", display: "flex", justifyContent: "space-between" }} >
-                        <FontAwesomeIcon className="boxforbutton" onClick={onClickBack} icon={faCircleChevronLeft} style={{ zIndex: "5", borderRadius: "40px", width: "7vw", height: "7vh", position: "absolute", left: "-1vw", cursor: "pointer" }} color={light ? "#f5c518" : "white"} />
-                        <FontAwesomeIcon className="boxbackbutton"onClick={onClickFor} icon={faCircleChevronRight} style={{ zIndex: "2", width: "7vw", height: "7vh", borderRadius: "40px", position: "absolute", right: "0vw", cursor: "pointer" }} color={light ? "#f5c518" : "white"} />
+                        <FontAwesomeIcon className="boxforbutton" onClick={onClickBack} icon={faCircleChevronLeft} style={{ zIndex: "5", borderRadius: "40px", position: "absolute", left: "-1vw", cursor: "pointer" }} color={light ? "#f5c518" : "white"} />
+                        <FontAwesomeIcon className="boxbackbutton"onClick={onClickFor} icon={faCircleChevronRight} style={{ zIndex: "2", borderRadius: "40px", position: "absolute", right: "0vw", cursor: "pointer" }} color={light ? "#f5c518" : "white"} />
                             {data.map((user) => (
                                 <Link to="/Page" state={user}>
                                     <div className="box" key={user.id} style={{ width: "22vw", float: "left", position: "relative", backgroundImage: "url(https://image.tmdb.org/t/p/w500" + user.poster_path + ")", borderRadius: "15px", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center" }}>

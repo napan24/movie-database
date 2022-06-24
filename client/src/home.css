@@ -1,128 +1,78 @@
 @media (max-width:320px) and (min-width:0px){
     .box{
-        height: 25vh;
-    }
-    .boxforbutton{
-        top: 10vh;
-    }
-    .boxbackbutton{
-        top: 10vh;
+        height: 25vw;
     }
 }
 @media (max-width:500px) and (min-width:321px){
     .box{
-        height: 30vh;
-    }
-    .boxforbutton{
-        top: 10vh;
-    }
-    .boxbackbutton{
-        top: 10vh;
+        height: 25vw;
     }
 }
 @media (max-width:650px) and (min-width:500px){
     .box{
-        height: 40vh;
-    }
-    .boxforbutton{
-        top: 15vh;
-    }
-    .boxbackbutton{
-        top: 15vh;
+        height: 25vw;
     }
 }
 @media (max-width:800px) and (min-width:651px){
     .box{
-        height: 45vh;
-    }
-    .boxforbutton{
-        top: 20vh;
-    }
-    .boxbackbutton{
-        top: 20vh;
+        height: 25vw;
     }
 }
 @media (max-width:1000px) and (min-width:801px){
     .box{
-        height: 50vh;
-    }
-    .boxforbutton{
-        top: 20vh;
-    }
-    .boxbackbutton{
-        top: 20vh;
+        height: 25vw;
     }
 }
 @media (max-width:1100px) and (min-width:1001px){
     .box{
-        height: 55vh;
-    }
-    .boxforbutton{
-        top: 25vh;
-    }
-    .boxbackbutton{
-        top: 25vh;
+        height: 30vw;
     }
 }
 @media (max-width:1200px) and (min-width:1101px){
     .box{
-        height: 60vh;
-    }
-    .boxforbutton{
-        top: 25vh;
-    }
-    .boxbackbutton{
-        top: 25vh;
+        height: 30vw;
     }
 }
 @media (max-width:2560px) and (min-width:1201px){
     .box{
-        height: 60vh;
+        height: 30vw;
     }
+}
+@media (max-width:2560px) and (min-width:0px){
     .boxforbutton{
-        top: 25vh;
+        top: 40%;
     }
     .boxbackbutton{
-        top: 25vh;
+        top: 40%;
     }
 }
-@media (max-width:2560px) and (min-width:2000px){
-    .background{
-        height:85vh;
-    }   
+@media (max-width:2560px) and (min-width:1800px){
+    .boxforbutton{
+        width:10vmin;
+        height:10vmin;
+    }
+    .boxbackbutton{
+        width:10vmin;
+        height:10vmin;
+    }
 }
-@media (max-width:1999px) and (min-width:1200px){
-    .background{
-        height:80vh;
-    }   
+@media (max-width:1799px) and (min-width:1000px){
+    .boxforbutton{
+        width:6vmin;
+        height:6vmin;
+    }
+    .boxbackbutton{
+        width:6vmin;
+        height:6vmin;
+    }
 }
-@media (max-width:1199px) and (min-width:1000px){
-    .background{
-        height:75vh;
-    }   
-}
-@media (max-width:999px) and (min-width:800px){
-    .background{
-        height:65vh;
-    }   
-}
-@media (max-width:799px) and (min-width:600px){
-    .background{
-        height:60vh;
-    }   
-}
-@media (max-width:599px) and (min-width:500px){
-    .background{
-        height:55vh;
-    }   
-}
-@media (max-width:499px) and (min-width:400px){
-    .background{
-        height:45vh;
-    }   
-}
-@media (max-width:399px) and (min-width:200px){
-    .background{
-        height:40vh;
-    }   
+@media (max-width:999px) and (min-width:600px){
+    .boxforbutton{
+        width:4vmin;
+        height:4vmin;
+    }
+    .boxbackbutton{
+        width:4vmin;
+        height:4vmin;
+    }
 }

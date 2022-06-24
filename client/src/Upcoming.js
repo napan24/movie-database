@@ -56,7 +56,6 @@ function Upcoming() {
             body: JSON.stringify({ email, user_data, movieid })
         });
         const result = await res.json();
-        console.log(result);
     }
     const fontColor = light ? "#f5c518" : "black";
     const headingsty = {

@@ -59,7 +59,6 @@ function Top() {
             body:JSON.stringify({email,user_data,movieid})
         });
         const result=await res.json();
-        console.log(result);
     }
     const handleMouseIn = event => {
         event.currentTarget.style.opacity = '0.9';

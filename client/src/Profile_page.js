@@ -72,7 +72,7 @@ function Profile_page() {
                 {data.profile_photo ? <div className='profile_photo'>
                     <img src={data.picture} style={{ height: "12rem", width: "12rem", borderRadius: "60px", position: "absolute", left: "6%", top: "75%" }} />
                 </div> :
-                    <FontAwesomeIcon icon={faCircleUser} size="10x" color="yellow" style={{ position: "absolute", top: "20vh", left: "5%", backgroundColor: "black", borderRadius: "50%" }} />
+                    <FontAwesomeIcon icon={faCircleUser} color="yellow" style={{ height:"15vmin",height:"15vmin",position: "absolute", top: "85%", left: "5%", backgroundColor: "black", borderRadius: "50%" }} />
                 }
             </div>
             <div style={{ display: "flex", marginTop: "8%", marginLeft: "7%" }}>

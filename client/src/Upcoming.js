@@ -23,6 +23,7 @@ function Upcoming() {
     const [final, setFinal] = useState(4);
     const [results, setResults] = useState(0);
     const [page, setPage] = useState(1);
+    console.log("a");
     const [loading, setLoading] = useState(false);
     const trending = async () => {
         setLoading(true);

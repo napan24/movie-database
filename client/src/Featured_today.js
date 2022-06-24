@@ -57,7 +57,6 @@ function Featured_today() {
             body:JSON.stringify({email,user_data,movieid})
         });
         const result=await res.json();
-        console.log(result);
     }
     useEffect(() => {
         trending();

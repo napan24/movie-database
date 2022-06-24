@@ -43,11 +43,11 @@ function Navbar() {
                 </div>
                 <button type="button" id="navbar_button" className="btn btn-outline-primary" onClick={func} style={{backgroundColor: light?"black":"white",position:"absolute",height:"80%" }}><h5 style={{fontSize:"1.5vw",color:light?"white":"black",marginTop:"0",marginBottom:"0"}}>{light?"Light":"Dark"}</h5></button>
                 <Link to="/profile">
-                {data.profile_picture?<img id="navbar_profile1" style={{width:"40px",height:"50px",position: "absolute", top: "4%"}} src={data.profile_picture}></img>:<FontAwesomeIcon id="navbar_profile" icon={faUser} size="2x" style={{position:"absolute",top:"20%",right:"10%"}}/>}
+                {data.profile_picture?<img id="navbar_profile1" style={{width:"40%",height:"50%",position: "absolute", top: "4%"}} src={data.profile_picture}></img>:<FontAwesomeIcon id="navbar_profile" icon={faUser} size="2x" style={{position:"absolute",top:"20%",right:"10%"}}/>}
                 </Link>
-                <ul className="nav navbar-nav navbar-right" style={{ position: "absolute", right: "2%",width:"100px",marginLeft:"15px"}}>
-                    <li><a onClick={logOut}><span className="glyphicon glyphicon-log-in"></span> Log Out</a></li>
-                </ul>
+                <div className="nav navbar-nav navbar-right" style={{position:"absolute",right:"5vmin"}}>
+                    <li><a onClick={logOut} id="navbar_logout"><span className="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+                </div>
             </nav>
         </>
     );

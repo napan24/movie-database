@@ -44,7 +44,7 @@ function Page() {
     const [background3, setBackground3] = useState([]);
     const [background4, setBackground4] = useState([]);
     const trending = async () => {
-        console.log("a");
+        console.log(data1);
         setLoader(true);
         const response = await fetch('https://api.themoviedb.org/3/movie/' + data1.id + '?api_key=' + API_KEY + '&append_to_response=videos,credits,images,similar&page=' + page);
         const data = (await response.json());

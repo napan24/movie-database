@@ -96,27 +96,25 @@ function Upcoming() {
     return (
         loading ? <Loader /> :
             <>
-                <div className="background" style={{ width: "100vw",backgroundColor:light?"black":"#f5c518" }}>
-                    <div className="title" style={{ fontSize: "3vw", color: light?"#f5c518":"black",marginBottom:"3vh" }}>
-                        Coming Soon
+                <div className="background" style={{ width: "100vw", backgroundColor: light ? "black" : "#f5c518" }}>
+                    <div className="title" style={{ fontSize: "3vw", color: light ? "#f5c518" : "black", marginBottom: "3vh" }}>
+                        Featured Today
                     </div>
-                    <div style={{position:"relative"}}>
-                    <FontAwesomeIcon onClick={onClickBack} icon={faCircleChevronLeft} style={{ zIndex: "5",borderRadius: "40px", width: "7vw", height: "7vh", position: "absolute", left: "-1vw", top: "30vh",cursor:"pointer" }} color={light ? "#f5c518" : "white"} />
-                        <FontAwesomeIcon onClick={onClickFor} icon={faCircleChevronRight} style={{ zIndex: "2", width: "7vw", height: "7vh",borderRadius: "40px", position: "absolute", right: "0vw", top: "30vh",cursor:"pointer" }} color={light ? "#f5c518" : "white"} />
-                        <div style={{ width: "100vw",display:"flex",justifyContent:"space-between" }} >
+                    <div style={{ position: "relative" }}>
+                    <FontAwesomeIcon className="boxforbutton" onClick={onClickBack} icon={faCircleChevronLeft} style={{ zIndex: "5", borderRadius: "40px", width: "7vw", height: "7vh", position: "absolute", left: "-1vw", cursor: "pointer" }} color={light ? "#f5c518" : "white"} />
+                        <FontAwesomeIcon className="boxbackbutton"onClick={onClickFor} icon={faCircleChevronRight} style={{ zIndex: "2", width: "7vw", height: "7vh", borderRadius: "40px", position: "absolute", right: "0vw", cursor: "pointer" }} color={light ? "#f5c518" : "white"} />
+                        <div style={{ width: "100vw", display: "flex", justifyContent: "space-between" }} >
                             {data.map((user) => (
-                                <div className="box" key={user.id} style={{ width: "22%", float: "left",marginRight:"5vh",position: "relative",backgroundImage:"url(https://image.tmdb.org/t/p/w500" + user.poster_path+ ")",borderRadius:"15px",backgroundSize:"cover",backgroundRepeat:"no-repeat" ,backgroundPosition:"center"}}>
-                                    <Link to="/Page" state={user}>
+                                <Link to="/Page" state={user}>
+                                    <div className="box" key={user.id} style={{ width: "22vw", float: "left", position: "relative", backgroundImage: "url(https://image.tmdb.org/t/p/w500" + user.poster_path + ")", borderRadius: "15px", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center" }}>
                                         <div>
                                             <FontAwesomeIcon icon={faStar} style={{ color: light ? "#f5c518" : "white", width: "12%", height: "8%", position: "absolute", left: "2%", top: "2%", zIndex: "2" }} />
                                             <span style={{ color: light ? "#f5c518" : "white", fontSize: "2vw", position: "absolute", left: "15%", top: "3%", zIndex: "2" }}>{user.vote_average}</span>
                                         </div>
-                                    </Link>
-                                    <button style={{ backgroundColor: light ? "white" : "black", whiteSpace: "nowrap", overflow: "hidden", textDecoration: "none", position: "absolute", top: "98%", left: "25%", fontSize: "1.2vw", paddingTop: "1%", paddingRight: "4%", paddingLeft: "4%", paddingBottom: "1%", borderRadius: "50px 50px 50px 50px", textOverflow: "----" }}><Link to="/Trailer" state={user} style={{ textDecoration: "none", color: light ? "black" : "white" }}><FontAwesomeIcon icon={faPlay} size="1x" />   Watch Trailer</Link></button>
-                                    <button>
-                                        <FontAwesomeIcon icon={faCirclePlus} style={{ height: "7%", position: "absolute", right: "-5%", top: "-2%" }} color="white" onClick={(e) => { addFav(e, user); }} />
-                                    </button>
-                                </div>
+                                        <button style={{ backgroundColor: light ? "white" : "black", whiteSpace: "nowrap", overflow: "hidden", textDecoration: "none", position: "absolute", top: "98%", left: "25%", fontSize: "1.2vw", paddingTop: "1%", paddingRight: "4%", paddingLeft: "4%", paddingBottom: "1%", borderRadius: "50px 50px 50px 50px", textOverflow: "----" }}><Link to="/Trailer" state={user} style={{ textDecoration: "none", color: light ? "black" : "white" }}><FontAwesomeIcon icon={faPlay} size="1x" />   Watch Trailer</Link></button>
+                                        <FontAwesomeIcon icon={faCirclePlus} style={{ height: "9%", position: "absolute", right: "0%", top: "0%" }} color="white" onClick={(e) => { addFav(e, user); }} />
+                                    </div>
+                                </Link>
                             ))}
                         </div>
                     </div>

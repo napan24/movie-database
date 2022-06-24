@@ -2,63 +2,127 @@
     .box{
         height: 25vh;
     }
-    .background{
-        height: 50vh;
+    .boxforbutton{
+        top: 10vh;
+    }
+    .boxbackbutton{
+        top: 10vh;
     }
 }
 @media (max-width:500px) and (min-width:321px){
     .box{
         height: 30vh;
     }
-    .background{
-        height: 50vh;
+    .boxforbutton{
+        top: 10vh;
+    }
+    .boxbackbutton{
+        top: 10vh;
     }
 }
 @media (max-width:650px) and (min-width:500px){
     .box{
         height: 40vh;
     }
-    .background{
-        height: 60vh;
+    .boxforbutton{
+        top: 15vh;
+    }
+    .boxbackbutton{
+        top: 15vh;
     }
 }
 @media (max-width:800px) and (min-width:651px){
     .box{
         height: 45vh;
     }
-    .background{
-        height: 70vh;
+    .boxforbutton{
+        top: 20vh;
+    }
+    .boxbackbutton{
+        top: 20vh;
     }
 }
 @media (max-width:1000px) and (min-width:801px){
     .box{
         height: 50vh;
     }
-    .background{
-        height: 75vh;
+    .boxforbutton{
+        top: 20vh;
+    }
+    .boxbackbutton{
+        top: 20vh;
     }
 }
 @media (max-width:1100px) and (min-width:1001px){
     .box{
         height: 55vh;
     }
-    .background{
-        height: 80vh;
+    .boxforbutton{
+        top: 25vh;
+    }
+    .boxbackbutton{
+        top: 25vh;
     }
 }
 @media (max-width:1200px) and (min-width:1101px){
     .box{
         height: 60vh;
     }
-    .background{
-        height: 85vh;
+    .boxforbutton{
+        top: 25vh;
+    }
+    .boxbackbutton{
+        top: 25vh;
     }
 }
-@media (max-width:2500px) and (min-width:1201px){
+@media (max-width:2560px) and (min-width:1201px){
     .box{
         height: 60vh;
     }
-    .background{
-        height: 80vh;
+    .boxforbutton{
+        top: 25vh;
     }
+    .boxbackbutton{
+        top: 25vh;
+    }
+}
+@media (max-width:2560px) and (min-width:2000px){
+    .background{
+        height:85vh;
+    }   
+}
+@media (max-width:1999px) and (min-width:1200px){
+    .background{
+        height:80vh;
+    }   
+}
+@media (max-width:1199px) and (min-width:1000px){
+    .background{
+        height:75vh;
+    }   
+}
+@media (max-width:999px) and (min-width:800px){
+    .background{
+        height:65vh;
+    }   
+}
+@media (max-width:799px) and (min-width:600px){
+    .background{
+        height:60vh;
+    }   
+}
+@media (max-width:599px) and (min-width:500px){
+    .background{
+        height:55vh;
+    }   
+}
+@media (max-width:499px) and (min-width:400px){
+    .background{
+        height:45vh;
+    }   
+}
+@media (max-width:399px) and (min-width:200px){
+    .background{
+        height:40vh;
+    }   
 }

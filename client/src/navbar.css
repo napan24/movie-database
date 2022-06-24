@@ -1,4 +1,4 @@
-@media (max-width:2500px) and (min-width:1000px){
+@media (max-width:2560px) and (min-width:1000px){
     #navbar_button{
         left:10vw;
     }
@@ -36,5 +36,15 @@
     }
     #navbar_profile{
         left:65vw;
+    }
+}
+@media (max-width:2560px) and (min-width:1801px){
+    #navbar_logout{
+        font-size:1vw;
+    }
+}
+@media (max-width:1800px) and (min-width:1000px){
+    #navbar_logout{
+        font-size:1.5vw;
     }
 }

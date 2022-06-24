@@ -82,28 +82,28 @@ export const Signup = () => {
     </div>
             <div className="body" style={{ width: "100vw", height: "100vh", backgroundImage: `url(${background})`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
                 <form method='POST'>
-                    <div className="box" style={{ width: "30vw", height: "80vh", backgroundColor: "white", borderRadius: "10px", position: "absolute", left: "0", right: "0", top: "0", bottom: "0", margin: "auto", fontFamily: "Arial, sans-serif" }}>
-                        <h3 style={{ fontSize: "3vw", position: "absolute", left: "30%", top: "0%" }}>
+                    <div className="box" style={{ width: "70vmin", height: "80vmin", backgroundColor: "white", borderRadius: "10px", position: "absolute", left: "0", right: "0", top: "0", bottom: "0", margin: "auto", fontFamily: "Arial, sans-serif" }}>
+                        <h3 style={{ fontSize: "7vmin", position: "absolute", left: "30%", top: "0%" }}>
                             Sign Up
                         </h3>
-                        <div style={{ position: "absolute", top: "25%", left: "8%" }}>
+                        <div style={{ position: "absolute", top: "25%", left: "8%" ,fontSize: "3vmin"}}>
                             Username
                         </div>
-                        <input type="text" className="fontAwesome" value={data.name} placeholder="Type Your Username" name="username" style={{ position: "absolute", top: "32%", left: "8%",width:"80%",height:"5%",border:"none",borderBottom:"2px solid black",outline:"none" }} onChange={inputChange}/>
-                        <div style={{ position: "absolute", top: "40%", left: "8%" }}>
+                        <input type="text" className="fontAwesome" value={data.name} placeholder="Type Your Username" name="username" style={{ position: "absolute", top: "32%", left: "8%",width:"80%",height:"5%",border:"none",borderBottom:"2px solid black",outline:"none",fontSize: "2vmin" }} onChange={inputChange}/>
+                        <div style={{ position: "absolute", top: "40%", left: "8%",fontSize: "3vmin" }}>
                             Email
                         </div>
-                        <input type="text" className="fontAwesome" value={data.email} placeholder="Type Your Email" name="email" style={{ position: "absolute", top: "47%", left: "8%",width:"80%",height:"5%",border:"none",borderBottom:"2px solid black",outline:"none" }} onChange={inputChange}/>
-                        <div style={{ position: "absolute", top: "55%", left: "8%" }}>
+                        <input type="text" className="fontAwesome" value={data.email} placeholder="Type Your Email" name="email" style={{ position: "absolute", top: "47%", left: "8%",width:"80%",height:"5%",border:"none",borderBottom:"2px solid black",outline:"none",fontSize: "2vmin" }} onChange={inputChange}/>
+                        <div style={{ position: "absolute", top: "55%", left: "8%",fontSize: "3vmin" }}>
                             Password
                         </div>
-                        <input type="password" placeholder="Type Your Password" value={data.password} name="password" style={{ position: "absolute", top: "62%", left: "8%",width:"80%",height:"5%",border:"none",borderBottom:"2px solid black",outline:"none" }} onChange={inputChange}/>
-                        <div style={{ position: "absolute", top: "70%", left: "8%" }}>
+                        <input type="password" placeholder="Type Your Password" value={data.password} name="password" style={{ position: "absolute", top: "62%", left: "8%",width:"80%",height:"5%",border:"none",borderBottom:"2px solid black",outline:"none",fontSize: "2vmin" }} onChange={inputChange}/>
+                        <div style={{ position: "absolute", top: "70%", left: "8%",fontSize: "3vmin" }}>
                             Confirm Password
                         </div>
-                        <input type="password" placeholder="Type Your Password" value={data.cpassword} name="cpassword" style={{ position: "absolute", top: "77%", left: "8%",width:"80%",height:"5%",border:"none",borderBottom:"2px solid black",outline:"none" }} onChange={inputChange}/>
+                        <input type="password" placeholder="Type Your Password" value={data.cpassword} name="cpassword" style={{ position: "absolute", top: "77%", left: "8%",width:"80%",height:"5%",border:"none",borderBottom:"2px solid black",outline:"none",fontSize: "2vmin" }} onChange={inputChange}/>
                         <Link to="signup">
-                        <button onClick={handleSubmit} style={{ position: "absolute", top: "88%", left: "8%" ,width:"80%",height:"7%",border:"none",backgroundColor:"black",color:"white",borderRadius:"10px"}}>Sign Up</button>
+                        <button onClick={handleSubmit} style={{ position: "absolute", top: "88%", left: "8%" ,width:"80%",height:"7%",border:"none",backgroundColor:"black",color:"white",borderRadius:"10px",fontSize: "3vmin"}}>Sign Up</button>
                         </Link>
                     </div>
                 </form>
